@@ -1,15 +1,11 @@
-$background-color: blue;
+$background-color: #f9f9f9;
 $secundario: #333333;
 
 body{
 	background-color: $background-color;
-	display: grid | inline-grid;
-
 	p{
 		color:$secundario;
 		font-size: 1.5em;
-		flex-direction:column;
-		transition: all ease 0.2s;
 	}
 
 	ul{

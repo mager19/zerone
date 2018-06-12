@@ -1,6 +1,6 @@
-body { background-color: blue; display: grid | inline-grid; }
+body { background-color: #f9f9f9; }
 
-body p { color: #333333; font-size: 1.5em; flex-direction: column; transition: all ease 0.2s; }
+body p { color: #333333; font-size: 1.5em; }
 
 body ul li { display: inline-block; }
 
