@@ -1,0 +1,7 @@
+body { background-color: blue; display: grid | inline-grid; }
+
+body p { color: #333333; font-size: 1.5em; flex-direction: column; transition: all ease 0.2s; }
+
+body ul li { display: inline-block; }
+
+body ul li a { text-decoration: none; }
