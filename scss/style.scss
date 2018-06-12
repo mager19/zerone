@@ -1,20 +1,163 @@
-$background-color: #f9f9f9;
-$secundario: #333333;
 
+
+@charset "utf-8";
+
+/* ============================== 
+	- Template Name: AppMore
+	- Autor: mager19
+	- Email: mager19@gmail.com
+	- Name File: style.css
+	- Version 1.0
+	- Website: http://mager19.com 
+	- Copyright: (C) 2017
+=================================
+
+-------------------------
+	Stylesheet Guide
+-------------------------
+
+1.	Import styles
+	
+	
+2.	Basic Elements
+
+
+
+	
+/*************************************/
+/* Import Styles --------------------------------------------------------*/
+/*************************************/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900|Rosario:400,700');
+@import "_mixins";
+@import "_variables";
+
+/*************************************/
+/* Basic Styles --------------------------------------------------------*/
+/*************************************/
+html{
+  font-size: 62.5%;
+}
 body{
-	background-color: $background-color;
-	p{
-		color:$secundario;
-		font-size: 1.5em;
+	font-family: "Poppins", Sans-serif;
+	font-size: 1.6rem;
+	letter-spacing: 0.01rem;
+	line-height: 1.7em;
+	background-color: #fff;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+p{
+	font-weight: lighter;
+}
+a:hover{
+	text-decoration: none;
+}
+img{
+	max-width: 100%;
+}
+
+ul{
+	margin-left: -1em;
+}
+
+ul li{
+	display: inline-block;
+	list-style: none;
+}
+
+//Utilidades
+.espaciado{
+	padding: 6em 0;
+}
+
+//header
+header{
+	background:linear-gradient(rgba(255, 255, 255, 0.2), 
+	rgba(255, 255, 255, 0.90)), url('../img/fondo.jpg');
+	background-position: center center;
+	display: flex;
+	align-items:center;
+	height: 90vh;
+}
+
+.menu{
+	margin-top: -2em;
+}
+
+.header__content{
+	color:$oscurouno;
+}
+
+.header__content h2{
+	margin:1.5em 0;
+}
+
+.header__content h1{
+	font-size: 4em;
+	line-height: 1em;
+}
+
+.header__content p{
+	font-family: "Rosario", Sans-serif;
+	font-weight: 200;
+	margin: 2em 0;
+}
+
+.header__content img{
+	background-color: #fff;
+	padding: 15px;
+	width: 90%;
+}
+
+.zbutton{
+	@extend %boton;
+	background-color: $oscurouno;
+	border: 2px solid $oscurouno;
+	a {
+		color:$claro;
 	}
 
-	ul{
-		li{
-			display: inline-block;
-
-			a{
-				text-decoration: none;
-			}
+	&:hover{
+		background-color: $claro;
+		border: 2px solid $oscurouno;
+		
+		a{
+			color:$oscurouno;
 		}
+	}
+}
+
+.zbutton--lineal{
+	@extend %boton;
+	background-color: $claro;
+	border:2px solid $oscurouno;
+	a {
+		color:$oscurouno;
+	}
+
+	&:hover{
+		background-color: $oscurouno;
+
+		a{
+			color:$claro;
+		}
+	}
+}
+
+
+
+
+@media screen and (max-width: 480px){
+	header{
+		height: 100vh;
+	}
+	.header__content h1{
+		font-size: 2em;
+		line-height: 1em;
+	}
+
+	.header__content p{
+		display: none;
 	}
 }

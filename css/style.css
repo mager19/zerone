@@ -1,7 +1,80 @@
-body { background-color: #f9f9f9; }
+/* ============================== 
+	- Template Name: AppMore
+	- Autor: mager19
+	- Email: mager19@gmail.com
+	- Name File: style.css
+	- Version 1.0
+	- Website: http://mager19.com 
+	- Copyright: (C) 2017
+=================================
 
-body p { color: #333333; font-size: 1.5em; }
+-------------------------
+	Stylesheet Guide
+-------------------------
 
-body ul li { display: inline-block; }
+1.	Import styles
+	
+	
+2.	Basic Elements
 
-body ul li a { text-decoration: none; }
+
+
+	
+/*************************************/
+/* Import Styles --------------------------------------------------------*/
+/*************************************/
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900|Rosario:400,700");
+.zbutton, .zbutton--lineal { padding: 0.5em 0.6em; font-size: 1.3em; margin: 0 auto; text-align: center; }
+
+/*************************************/
+/* Basic Styles --------------------------------------------------------*/
+/*************************************/
+html { font-size: 62.5%; }
+
+body { font-family: "Poppins", Sans-serif; font-size: 1.6rem; letter-spacing: 0.01rem; line-height: 1.7em; background-color: #fff; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+p { font-weight: lighter; }
+
+a:hover { text-decoration: none; }
+
+img { max-width: 100%; }
+
+ul { margin-left: -1em; }
+
+ul li { display: inline-block; list-style: none; }
+
+.espaciado { padding: 6em 0; }
+
+header { background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/fondo.jpg"); background-position: center center; display: flex; align-items: center; height: 90vh; }
+
+.menu { margin-top: -2em; }
+
+.header__content { color: #3E4042; }
+
+.header__content h2 { margin: 1.5em 0; }
+
+.header__content h1 { font-size: 4em; line-height: 1em; }
+
+.header__content p { font-family: "Rosario", Sans-serif; font-weight: 200; margin: 2em 0; }
+
+.header__content img { background-color: #fff; padding: 15px; width: 90%; }
+
+.zbutton { background-color: #3E4042; border: 2px solid #3E4042; }
+
+.zbutton a { color: #f9f9f9; }
+
+.zbutton:hover { background-color: #f9f9f9; border: 2px solid #3E4042; }
+
+.zbutton:hover a { color: #3E4042; }
+
+.zbutton--lineal { background-color: #f9f9f9; border: 2px solid #3E4042; }
+
+.zbutton--lineal a { color: #3E4042; }
+
+.zbutton--lineal:hover { background-color: #3E4042; }
+
+.zbutton--lineal:hover a { color: #f9f9f9; }
+
+@media screen and (max-width: 480px) { header { height: 100vh; }
+  .header__content h1 { font-size: 2em; line-height: 1em; }
+  .header__content p { display: none; } }
