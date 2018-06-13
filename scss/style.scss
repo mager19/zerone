@@ -48,7 +48,8 @@ body{
 	overflow-x: hidden;
 }
 p{
-	font-weight: lighter;
+	@include parrafo;
+
 }
 a:hover{
 	text-decoration: none;
@@ -73,42 +74,48 @@ ul li{
 
 //header
 header{
-	background:linear-gradient(rgba(255, 255, 255, 0.2), 
+	background:linear-gradient(rgba(255, 255, 255, 0.4), 
 	rgba(255, 255, 255, 0.90)), url('../img/fondo.jpg');
 	background-position: center center;
+	background-size: cover;
 	display: flex;
 	align-items:center;
-	height: 90vh;
+	height: 85vh;
 }
 
 .menu{
-	margin-top: -2em;
+	margin-top: 5em;
+
+	img{
+		width: 35px;
+	}
 }
 
 .header__content{
 	color:$oscurouno;
+	height: calc(75vh - 70px);
+	
+	h1{
+		font-size: 4em;
+		line-height: 1em;
+	}
+
+	h2{
+		margin:1.5em 0;
+	}
+
+	p{
+		@include parrafo($fweight:400)
+		margin: 2em 0;
+	}
+
+	img{
+		background-color: #fff;
+		padding: 15px;
+		width: 90%;
+	}
 }
 
-.header__content h2{
-	margin:1.5em 0;
-}
-
-.header__content h1{
-	font-size: 4em;
-	line-height: 1em;
-}
-
-.header__content p{
-	font-family: "Rosario", Sans-serif;
-	font-weight: 200;
-	margin: 2em 0;
-}
-
-.header__content img{
-	background-color: #fff;
-	padding: 15px;
-	width: 90%;
-}
 
 .zbutton{
 	@extend %boton;
@@ -119,7 +126,7 @@ header{
 	}
 
 	&:hover{
-		background-color: $claro;
+		background-color: transparent;
 		border: 2px solid $oscurouno;
 		
 		a{
@@ -130,7 +137,7 @@ header{
 
 .zbutton--lineal{
 	@extend %boton;
-	background-color: $claro;
+	background-color: transparent;
 	border:2px solid $oscurouno;
 	a {
 		color:$oscurouno;
@@ -144,6 +151,142 @@ header{
 		}
 	}
 }
+
+
+//overlay
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(81,167,184,0.9);
+	z-index: 1;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	cursor:pointer;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 160px;
+	top: 45px;
+	overflow: hidden;
+	border: none;
+	background: url(../img/cross.png) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 1000;
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 60%;
+	height: 60%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.overlay ul li a {
+	font-size: 54px;
+	font-weight: 300;
+	display: block;
+	color: #fff;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: $oscurodos;
+}
+
+/* Effects */
+.overlay-slidedown {
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+	transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+}
+
+.overlay-slidedown.open {
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out;
+	transition: transform 0.4s ease-in-out;
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
+
+
+//Myprocess
+.title__section{
+	@include title;
+}
+
+.subtitle__section{
+	@include subtitle;
+}
+
+section p{
+	@include parrafo($talign:center);
+}
+
+.process__item{
+	padding: 4em 0;
+	text-align: center;
+	
+	h3{
+		color:$oscurodos;
+		font-size: 1.5em;
+		margin:1em 0;
+	}
+
+	p{
+		@include parrafo($fsize:0.9em, $talign:center)
+		line-height: 1.7em;
+	}
+
+	img{
+		width: 50%;
+	}
+
+}
+
+
 
 
 

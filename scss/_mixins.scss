@@ -8,3 +8,25 @@
 	text-align: center;
 }
 
+//Mixins
+@mixin title($color:$verdeuno){
+	color:$color;
+	font-size:2.8em;
+	text-align: center;
+}
+
+@mixin subtitle($color:$oscurouno){
+	color:$color;
+	font-size:2em;
+	font-weight: 300;
+	text-align: center;
+	margin: 1em 0;
+	padding: 0 2em;
+}
+
+@mixin parrafo($fsize: 1em, $talign:left, $fweight: 200){
+	color:$oscurouno;
+	font-size: $fsize;
+	font-weight: $fweight;
+	text-align: $talign;
+}
