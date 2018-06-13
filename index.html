@@ -5,19 +5,16 @@
 	<title>ZerOne Portfolio</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	
 </head>
 <body>
 <!-- Header -->
 <header>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-1 offset-md-11">
-				<div class="menu">
-					<a href="#"  id="trigger-overlay"><img src="img/menu.svg" alt="menú"></a>
-				</div>
-			</div>
-		</div>
+		<div class="menu">
+			<a href="#"  id="trigger-overlay"><img src="img/menu.svg" alt="menú"></a>
+		</div>	
 		<!-- open/close -->
 		<div class="overlay overlay-slidedown">
 			<button type="button" class="overlay-close">Close</button>
@@ -28,32 +25,39 @@
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
-		</div>		
-		<div class="header__content">
-			<div class="row">
-				<div class="col-md-5 col-sm-12">
-					<img src="img/profile.jpg" alt="profile">	
-				</div>
-				<div class="col-md-6 col-sm-12">
-					<div class="header__content">
-						<h2>Marilyn Ward</h2>
-						<h1>Frontend Developer UI</h1>	
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti illo et tempora autem, distinctio maxime voluptatem, impedit molestias voluptatibus libero fugiat adipisci consectetur a odit vitae facilis ipsum. Laudantium, consequatur.</p>	
-						<div class="row">
-							<div class="col-5">
-								<div class="zbutton">
-									<a href="#">Get In touch</a>
+		</div>	
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="header__content">
+					<div class="row">
+						<div class="col-md-5">
+							<figure>
+								<img src="img/profile.jpg" alt="profile">	
+							</figure>
+						</div>
+						<div class="col-md-7">
+							<div class="header__content__info">
+								<h2>Marilyn Ward</h2>
+								<h1>Frontend Developer UI</h1>	
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti illo et tempora autem, distinctio maxime voluptatem, impedit molestias voluptatibus libero fugiat adipisci consectetur a odit.</p>	
+								<div class="row">
+									<div class="col-5">
+										<div class="zbutton">
+											<a href="#">Get In touch</a>
+										</div>
+									</div>
+									<div class="col-5">
+										<div class="zbutton--lineal">
+											<a href="#">My Work</a>
+										</div>
+									</div>		
 								</div>
 							</div>
-							<div class="col-5">
-								<div class="zbutton--lineal">
-									<a href="#">My Work</a>
-								</div>
-							</div>		
 						</div>
 					</div>
 				</div>
-			</div>		
+			</div>
 		</div>
 	</div>
 </header>
@@ -61,6 +65,7 @@
 
 <!-- Myprocess -->
 <section class="espaciado process">
+	<div class="burbuja"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -73,13 +78,98 @@
 				<div class="process__item">
 					<img src="img/design.svg" alt="design">
 					<h3>Design your Product</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quibusdam neque mollitia, perferendis autem quas. Nam iste harum, doloremque veniam!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quibusdam neque mollitia, perferendis autem quas. </p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div class="process__item">
+					<img src="img/develop.svg" alt="design">
+					<h3>Develop Work Idea</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quibusdam neque mollitia, perferendis autem quas.</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div class="process__item">
+					<img src="img/analytics.svg" alt="design">
+					<h3>Optimize SEO</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quibusdam neque mollitia, perferendis autem quas.</p>
+				</div>
+			</div>
+
+			<div class="col-md-4 offset-md-4">
+				<div class="zbutton">
+					<a href="#">See Example</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- /Myprocess -->
+
+<!-- My Work -->
+<section class="espaciado mywork">
+	<div class="burbuja"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="title__section">My Work</h2>
+				<h3 class="subtitle__section">The result of my process is reflected in satisfied customers</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="col-md-12">
+			<div class="mywork__carrousel">
+				<div class="mywork__carrousel__item"><img src="img/Instagram Story.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 2.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 3.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 4.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 2.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 3.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 4.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 2.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 3.png" alt="item"></div>
+			  	<div class="mywork__carrousel__item"><img src="img/Instagram Story 4.png" alt="item"></div>
+			  	
+			</div>
+		</div>
+		<div class="col-md-4 offset-md-4">
+			<div class="zbutton--lineal--blanco">
+				<a href="#">All Works</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /My Work -->
+
+<!-- Me -->
+<section class="me">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="title__section">Want to Work with me?</h2>
+			</div>
+			<div class="col-md-3 offset-md-9">
+				<div class="zbutton--lineal--blanco">
+					<a href="#">All Works</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Me -->
+
+<section class="espaciado blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur explicabo fuga obcaecati sequi incidunt laboriosam ab molestias velit debitis. Et porro at laboriosam unde, aperiam, tenetur consequatur culpa cumque commodi.
+			</div>
+		</div>
+	</div>
+</section>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.js"
@@ -89,7 +179,47 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/demo1.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	
+<script>
 
+	$(document).ready(function() {
+
+		$('.mywork__carrousel').slick({
+  				autoplay: true,
+  				autoplaySpeed: 0,
+  				speed: 8000,
+				dots: false,
+				infinite: true,
+				centerMode: true,
+		    	cssEase: 'linear',
+		  		slidesToShow: 5,
+		  		slidesToScroll: 1,
+		  		arrows:false,
+		  		pauseOnHover: true,
+		  		responsive: [
+		  			
+				    {
+				      breakpoint: 800,
+				      settings: {
+				        slidesToShow: 3,
+				        slidesToScroll: 1,
+				        infinite: true,
+				        
+				      }
+		    		},    		
+		    		{
+		      		  breakpoint: 480,
+		      		  settings: {
+		        	  slidesToShow: 1,
+		        	  slidesToScroll: 1,
+		        	  arrows: false,
+		      		}
+		    },
+		    	]
+		});
+	});
+</script>			
 
 </body>
 </html>

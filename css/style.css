@@ -24,7 +24,7 @@
 /* Import Styles --------------------------------------------------------*/
 /*************************************/
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900|Rosario:400,700");
-.zbutton, .zbutton--lineal { padding: 0.5em 0.6em; font-size: 1.3em; margin: 0 auto; text-align: center; }
+.zbutton, .zbutton--lineal, .zbutton--lineal--blanco { padding: 0.5em 0.6em; font-size: 1.3em; margin: 0 auto; text-align: center; }
 
 /*************************************/
 /* Basic Styles --------------------------------------------------------*/
@@ -45,21 +45,21 @@ ul li { display: inline-block; list-style: none; }
 
 .espaciado { padding: 6em 0; }
 
-header { background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("../img/fondo.jpg"); background-position: center center; background-size: cover; display: flex; align-items: center; height: 85vh; }
+header { background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("../img/fondo.jpg"); background-position: center center; background-size: cover; display: flex; align-items: center; height: 80vh; }
 
-.menu { margin-top: 5em; }
+.menu { position: absolute; left: 90%; top: 5%; }
 
 .menu img { width: 35px; }
 
-.header__content { color: #3E4042; height: calc(75vh - 70px); }
+.header__content { color: #3E4042; height: calc(75.2vh - 70px); display: flex; align-items: center; }
 
 .header__content h1 { font-size: 4em; line-height: 1em; }
 
-.header__content h2 { margin: 1.5em 0; }
-
 .header__content p { color: #3E4042; font-size: 1em; font-weight: 400; text-align: left; margin: 2em 0; }
 
-.header__content img { background-color: #fff; padding: 15px; width: 90%; }
+.header__content img { background-color: #fff; padding: 15px; }
+
+.header__content__info { padding: 6em 2em; }
 
 .zbutton { background-color: #3E4042; border: 2px solid #3E4042; }
 
@@ -76,6 +76,14 @@ header { background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 25
 .zbutton--lineal:hover { background-color: #3E4042; }
 
 .zbutton--lineal:hover a { color: #f9f9f9; }
+
+.zbutton--lineal--blanco { background-color: transparent; border: 2px solid #f9f9f9; }
+
+.zbutton--lineal--blanco a { color: #f9f9f9; }
+
+.zbutton--lineal--blanco:hover { background-color: #f9f9f9; }
+
+.zbutton--lineal--blanco:hover a { color: #3E4042; }
 
 /* Overlay style */
 .overlay { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: rgba(81, 167, 184, 0.9); z-index: 1; }
@@ -112,9 +120,27 @@ section p { color: #3E4042; font-size: 1em; font-weight: 200; text-align: center
 
 .process__item h3 { color: #2A3143; font-size: 1.5em; margin: 1em 0; }
 
-.process__item p { color: #3E4042; font-size: 0.9em; font-weight: 200; text-align: center; line-height: 1.7em; }
+.process__item p { color: #3E4042; font-size: 0.9em; font-weight: 200; text-align: center; line-height: 1.7em; margin-left: 8%; width: 84%; }
 
-.process__item img { width: 50%; }
+.process__item img { width: 40%; }
+
+.process .burbuja { border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; background-color: #51A7B8; height: 12em; left: 95%; margin-top: 5em; opacity: 0.3; position: absolute; width: 12em; }
+
+.mywork { background-color: #51A7B8; color: #f9f9f9; }
+
+.mywork .title__section { color: #f9f9f9; font-size: 2.8em; text-align: center; }
+
+.mywork .subtitle__section { color: #f9f9f9; font-size: 2em; font-weight: 300; text-align: center; margin: 1em 0; padding: 0 2em; }
+
+.mywork .burbuja { border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; background-color: #f9f9f9; height: 6em; left: -3em; margin-top: 5em; opacity: 0.3; position: absolute; width: 6em; }
+
+.mywork__carrousel { margin-top: 2em; margin-bottom: 4em; }
+
+.mywork__carrousel__item { background-color: #f9f9f9; padding: 10px; margin-left: 2em; }
+
+.me { background-image: url("../img/trianglify.png"); padding: 3em 0; }
+
+.me .title__section { color: #f9f9f9; font-size: 2.3em; text-align: center; text-align: right; margin-bottom: 0.5em; }
 
 @media screen and (max-width: 480px) { header { height: 100vh; }
   .header__content h1 { font-size: 2em; line-height: 1em; }

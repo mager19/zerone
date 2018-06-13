@@ -80,28 +80,30 @@ header{
 	background-size: cover;
 	display: flex;
 	align-items:center;
-	height: 85vh;
+	height: 80vh;
 }
 
 .menu{
-	margin-top: 5em;
+	position: absolute;
+	left: 90%;
+	top: 5%;
 
 	img{
 		width: 35px;
 	}
 }
 
+
 .header__content{
 	color:$oscurouno;
-	height: calc(75vh - 70px);
+	height: calc(75.2vh - 70px);
+	display: flex;
+	align-items:center;
 	
+		
 	h1{
 		font-size: 4em;
 		line-height: 1em;
-	}
-
-	h2{
-		margin:1.5em 0;
 	}
 
 	p{
@@ -112,10 +114,13 @@ header{
 	img{
 		background-color: #fff;
 		padding: 15px;
-		width: 90%;
+		// width: 100%;
 	}
 }
 
+.header__content__info{
+	padding: 6em 2em;
+}
 
 .zbutton{
 	@extend %boton;
@@ -151,6 +156,24 @@ header{
 		}
 	}
 }
+
+.zbutton--lineal--blanco{
+	@extend %boton;
+	background-color: transparent;
+	border:2px solid $claro;
+	a {
+		color:$claro;
+	}
+
+	&:hover{
+		background-color: $claro;
+
+		a{
+			color:$oscurouno;
+		}
+	}
+}
+
 
 
 //overlay
@@ -278,17 +301,76 @@ section p{
 	p{
 		@include parrafo($fsize:0.9em, $talign:center)
 		line-height: 1.7em;
+		margin-left: 8%;
+		width: 84%;
 	}
 
 	img{
-		width: 50%;
+		width: 40%;
 	}
 
+}
+
+.process .burbuja{
+	@include burbuja($verdeuno, 12em, 12em, 95%, 5em);
+}
+
+//My Work
+.mywork{
+	background-color: $verdeuno;
+	color:$claro;
+
+	.title__section{
+		@include title($claro);
+	}
+
+	.subtitle__section{
+		@include subtitle($claro);
+	}
+
+	.burbuja{
+		@include burbuja($claro, 6em, 6em, -3em, 5em);
+	}
+
+}
+
+.mywork__carrousel{
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
+.mywork__carrousel__item{
+	background-color: $claro;
+	padding: 10px;
+	margin-left: 2em;
+}
+
+
+//Me
+.me{
+	background-image: url('../img/trianglify.png');
+	padding: 3em 0;
+
+	.title__section{
+		@include title($claro, 2.3em);
+		text-align: right;
+		margin-bottom: 0.5em;
+	}
 }
 
 
 
 
+//MEDIA QUERIES ///////////
+
+@media screen and (max-width: 1440px){
+
+
+}
+
+@media screen and (max-width: 1366px){
+
+}
 
 
 @media screen and (max-width: 480px){

@@ -9,9 +9,9 @@
 }
 
 //Mixins
-@mixin title($color:$verdeuno){
+@mixin title($color:$verdeuno, $fsize:2.8em){
 	color:$color;
-	font-size:2.8em;
+	font-size:$fsize;
 	text-align: center;
 }
 
@@ -29,4 +29,17 @@
 	font-size: $fsize;
 	font-weight: $fweight;
 	text-align: $talign;
+}
+
+@mixin burbuja($color, $alto, $ancho, $left, $top:5em){
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	background-color:$color;
+	height: $alto;
+	left: $left;
+	margin-top: $top;
+	opacity: 0.3;
+	position: absolute;
+	width: $ancho;
 }
