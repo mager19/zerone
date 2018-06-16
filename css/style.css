@@ -142,6 +142,51 @@ section p { color: #3E4042; font-size: 1em; font-weight: 200; text-align: center
 
 .me .title__section { color: #f9f9f9; font-size: 2.3em; text-align: center; text-align: right; margin-bottom: 0.5em; }
 
+.blog { background-color: #f9f9f9; }
+
+.blog__item { background-color: #ffffff; margin-top: 3em; }
+
+.blog__item--left { background-size: cover; background-position: center center; height: 100%; }
+
+.blog__item--left1 { background-image: url("../img/blog1.png"); }
+
+.blog__item--left2 { background-image: url("../img/blog2.png"); }
+
+.blog__item--left3 { background-image: url("../img/blog3.png"); }
+
+.blog__item--left4 { background-image: url("../img/blog4.png"); }
+
+.blog__item--right { color: #3E4042; padding: 3em 0em; padding-right: 2em; }
+
+.blog__item--right h4 { font-weight: 200; opacity: 0.5; }
+
+.blog__item--right h3 { font-size: 1.5em; font-weight: 600; padding: 1em 0; }
+
+.blog__item--right p { text-align: left; max-height: 140px; overflow: hidden; }
+
+.blog__item--right a { color: #2A3143; display: block; font-weight: 500; padding-top: 1em; padding-right: 10px; text-align: right; }
+
+.blog .zbutton { margin-top: 3em; }
+
+footer { background-color: #2A3143; padding: 3em 0; }
+
+footer .title__section { color: #f9f9f9; font-size: 2.3em; text-align: center; }
+
+footer .subtitle__section { color: #f9f9f9; font-size: 2em; font-weight: 300; text-align: center; margin: 1em 0; padding: 0 2em; }
+
+footer .subtitle__section span { color: #00C5BE; font-weight: 500; }
+
+footer p { color: #f9f9f9; font-size: 1.2em; letter-spacing: 1px; text-align: center; }
+
+footer p a { color: #f9f9f9; text-decoration: underline; }
+
+footer ul { margin-top: 2em; text-align: center; }
+
+footer ul li { display: inline-block; margin-right: 2em; }
+
+footer ul li a img { width: 28px; height: 28px; }
+
 @media screen and (max-width: 480px) { header { height: 100vh; }
   .header__content h1 { font-size: 2em; line-height: 1em; }
-  .header__content p { display: none; } }
+  .header__content p { display: none; }
+  .blog__item--left { height: 200px; } }

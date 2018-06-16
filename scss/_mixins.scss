@@ -43,3 +43,9 @@
 	position: absolute;
 	width: $ancho;
 }
+
+// $numero:1;
+
+@mixin blogitem($numero){ 	
+	background-image: url('../img/blog#{$numero}.png');
+}

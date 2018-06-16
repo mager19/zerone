@@ -358,6 +358,110 @@ section p{
 	}
 }
 
+//blog
+.blog{
+	background-color: $claro;
+
+	&__item{
+		background-color:$blanco;
+		margin-top: 3em;
+
+		&--left {
+			background-size: cover;
+			background-position: center center;
+			height: 100%;
+
+			@for $i from 1 through 4 {
+				&#{$i}{
+					@include blogitem($i);
+				}
+			}
+		}
+		&--right{
+			color:$oscurouno;
+			padding: 3em 0em;
+			padding-right: 2em;
+
+			h4{
+				font-weight: 200;
+				opacity: 0.5;
+			}
+
+			h3{
+				font-size: 1.5em;
+				font-weight: 600;
+				padding: 1em 0;
+			}
+
+			p{
+				text-align: left;
+				max-height: 140px;
+				overflow: hidden;
+			}
+
+			a{
+				color:$oscurodos;
+				display: block;
+				font-weight: 500;
+				padding-top: 1em;
+				padding-right: 10px;
+				text-align: right;
+			}
+		}
+	}
+	.zbutton{
+		margin-top: 3em;
+	}
+}
+
+
+//Footer
+footer{
+	background-color:$oscurodos;
+	padding: 3em 0;
+
+	.title__section{
+		@include title($claro, 2.3em);
+	}
+
+	.subtitle__section{
+		@include subtitle($color:$claro);
+		span{
+			color:$verdedos;
+			font-weight: 500;
+		}
+	}
+
+	p{
+		color:$claro;
+		font-size: 1.2em;
+		letter-spacing: 1px;
+		text-align: center;
+
+		a{
+			color:$claro;
+			text-decoration: underline;
+		}
+	}
+
+	ul{
+		margin-top: 2em;
+		text-align: center;
+
+		li{
+			display: inline-block;
+			margin-right: 2em;
+
+			a{
+				img{
+					width: 28px;
+					height: 28px;
+				}
+			}
+		}
+	}
+
+}
 
 
 
@@ -385,4 +489,9 @@ section p{
 	.header__content p{
 		display: none;
 	}
+
+	.blog__item--left{
+		height: 200px;
+	}
+
 }
