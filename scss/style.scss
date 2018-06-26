@@ -78,7 +78,7 @@ ul li{
 }
 
 //header
-header{
+.header__home{
 	background:linear-gradient(rgba(255, 255, 255, 0.4), 
 	rgba(255, 255, 255, 0.90)), url('../img/fondo.jpg');
 	background-position: center center;
@@ -86,6 +86,10 @@ header{
 	display: flex;
 	align-items:center;
 	height: 80vh;
+}
+
+.header__works{
+	background-color: $verdeuno;
 }
 
 .menu{
@@ -470,6 +474,62 @@ footer{
 }
 
 
+//All Works
+
+.header__works {
+	.slick-slide {
+    	height: auto;
+	}
+
+    .mywork__carrousel {
+    	margin-top: 1em; 
+    	margin-bottom: 0em;
+	}
+}
+
+.allworks__item{
+	height: 400px;
+	margin-top: 4em;
+	
+	@for $i from 1 through 6 {
+		&#{$i}{
+			@include allworksitem($i);
+		}
+	}
+
+	.info{
+		background-color: #fff;
+		border-top: 1em solid $blanco;
+	    bottom: 10;
+	    color:$oscurouno;
+	    cursor:pointer;
+	    margin-left: 2.3%;
+	    padding: 1em;
+	    position: absolute;
+	    text-align: right;
+	    width: 90%;
+
+	    transition: all linear 0.2s;
+		
+		h3{
+			font-size: 1.2em;
+			font-weight: 300;
+		}
+
+		h2{
+			font-size: 2.5em;
+		}
+
+		&:hover{
+			border-top: 1em solid $blanco;
+			background-color: $verdeuno;
+			color:$blanco;
+			padding-top: 2em;
+		}
+
+	}
+}
+
 
 //MEDIA QUERIES ///////////
 
@@ -481,6 +541,10 @@ footer{
 	.header__content img {
 	    width: 70%;
 	    margin-top: 15%;
+	}
+
+	.header__works{
+		height: 70vh;
 	}
 }
 
@@ -520,19 +584,36 @@ footer{
     	padding: 0.3em 0;
 	}
 
+	.header__works{
+		height: 50vh;
+	}
+
+	.allworks__item {
+		.info {
+  			width: 87%;
+
+  			h2 {
+	    		font-size: 1.5em;
+	    	}
+
+	    	h3{
+	    		font-size: 1em;
+	    	}
+   		}
+	}
 
 }
 
 @media screen and (max-width: 480px){
 	header{
-		height: 90vh;
+		height: 94vh;
 	}
 
 	.header__content {
 		img {
 		    margin-top: 5%;
-		    margin-left: 10%;
-		    width: 70%;
+		    margin-left: 20%;
+		    width: 60%;
 		}
 
 		h1{
@@ -567,5 +648,29 @@ footer{
     	font-size: 0.8em;
     	margin-bottom: 1em;
     }
+
+    .header__works{
+		height: 76vh;
+
+		.mywork__carrousel {
+		    margin-top: 0em;
+		}
+	}
+
+	.title__section, .mywork .title__section{
+	    font-size: 2.5em;
+	}
+
+	.subtitle__section, .mywork .subtitle__section  {
+	    font-size: 1.2em;
+	    margin: 1em 0;
+	    padding: 0 0em;
+	}
+
+	footer .subtitle__section {
+	    font-size: 1.5em;
+	    margin: 1em 0;
+	    padding: 0 1em;
+	}
 
 }

@@ -55,3 +55,10 @@
 @mixin blogitem($numero){ 	
 	background-image: url('../img/blog#{$numero}.png');
 }
+
+//allworks item
+
+@mixin allworksitem($numero){
+	background-image: url('../img/works/work#{$numero}.png');
+	background-size: cover;
+}
