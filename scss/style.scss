@@ -30,6 +30,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900|Rosario:400,700');
 @import "_mixins";
 @import "_variables";
+@import "_mediaqueries";
 
 /*************************************/
 /* Basic Styles --------------------------------------------------------*/
@@ -90,6 +91,7 @@ ul li{
 
 .header__works{
 	background-color: $verdeuno;
+	overflow:hidden; 
 }
 
 .menu{
@@ -531,6 +533,25 @@ footer{
 }
 
 
+// Work
+
+.work{
+	p{
+		padding-top:2em;
+		text-align:left;
+	}
+
+	img{
+		padding-top:2em;
+		width:100%;
+	}
+
+	& .work__image{
+		margin-bottom:2em;
+	}
+}
+
+
 //MEDIA QUERIES ///////////
 
 @media screen and (max-width: 1366px){
@@ -544,7 +565,11 @@ footer{
 	}
 
 	.header__works{
-		height: 70vh;
+		height: 80vh;
+
+		& .mywork__carrousel {
+		    margin-top: 0em;
+		}
 	}
 }
 
