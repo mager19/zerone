@@ -432,6 +432,10 @@ footer{
 	background-color:$oscurodos;
 	padding: 3em 0;
 
+	h2{
+		padding-top: 1.7em;
+	}
+
 	.title__section{
 		@include title($claro, 2.3em);
 	}
@@ -549,6 +553,38 @@ footer{
 	& .work__image{
 		margin-bottom:2em;
 	}
+}
+
+
+// Contact
+
+.contact h2{
+	margin-top: 2em;
+}
+
+.contact .boton__social img{
+	padding: 0px;
+	width: 70%;
+}
+
+.contactsection form label{
+	color:#AAABAB;
+	font-size: 1.3em;
+	
+}
+
+.contactsection form input, .contactsection form textarea{
+	border:1px solid #AAABAB;
+	padding: 10px;
+	margin: 1em 0;
+	width: 100%;
+}
+
+input[type=submit]{
+	background-color: #333333;
+	color:#fff;
+	margin-top: 2em;
+	margin-bottom: 0em!important;
 }
 
 

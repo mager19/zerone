@@ -210,6 +210,8 @@ section p { color: #3E4042; font-size: 1em; font-weight: 200; text-align: center
 
 footer { background-color: #2A3143; padding: 3em 0; }
 
+footer h2 { padding-top: 1.7em; }
+
 footer .title__section { color: #f9f9f9; font-size: 2.3em; text-align: center; }
 
 footer .subtitle__section { color: #f9f9f9; font-size: 2em; font-weight: 300; text-align: center; margin: 1em 0; padding: 0 2em; }
@@ -259,6 +261,16 @@ footer ul li a img { width: 28px; height: 28px; }
 .work img { padding-top: 2em; width: 100%; }
 
 .work .work__image { margin-bottom: 2em; }
+
+.contact h2 { margin-top: 2em; }
+
+.contact .boton__social img { padding: 0px; width: 70%; }
+
+.contactsection form label { color: #AAABAB; font-size: 1.3em; }
+
+.contactsection form input, .contactsection form textarea { border: 1px solid #AAABAB; padding: 10px; margin: 1em 0; width: 100%; }
+
+input[type=submit] { background-color: #333333; color: #fff; margin-top: 2em; margin-bottom: 0em !important; }
 
 @media screen and (max-width: 1366px) { header { height: 70vh; }
   .header__content img { width: 70%; margin-top: 15%; }
